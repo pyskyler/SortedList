@@ -9,12 +9,12 @@ public class SortedList {
     }
 
     public void add(String s) {
-        int index = BinarySearchString.search(list, 0, list.size() - 1, s);
+        int index = BinarySearchString.search(list, 0, list.size() - 1, s.toLowerCase());
         list.add(index, s);
     }
 
     public String search(String s) {
-        int index = BinarySearchString.search(list, 0, list.size() - 1, s);
+        int index = BinarySearchString.search(list, 0, list.size() - 1, s.toLowerCase());
         if (index < list.size() && list.get(index).equals(s)) {
             return String.format("\"%s\" found at index %d", s, index);
         } else {

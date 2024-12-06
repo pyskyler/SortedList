@@ -8,11 +8,11 @@ public class BinarySearchString {
         {
             int mid = (low + high) / 2;
 
-            if (a.get(mid).equals(string))
+            if (a.get(mid).toLowerCase().equals(string))
             {
                 return mid;
             }
-            else if (comesBefore(a.get(mid), string))
+            else if (comesBefore(a.get(mid).toLowerCase(), string))
             {
                 return search(a, mid + 1, high, string);
             }
